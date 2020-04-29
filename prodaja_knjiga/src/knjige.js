@@ -9,7 +9,7 @@ const Knjige = ({ knjige }) => {
         <h5 className="mt-0 mb-1">{knjiga.naziv}</h5>
         <span className="pisac">{knjiga.pisac}, </span>
         <span className="kategorija">{knjiga.kategorija}</span> <br />
-        <span className="cijena">{knjiga.cijena} KM</span>
+        <span className="cijena">{knjiga.cijena} fKM</span>
       </div>
     );
   });
