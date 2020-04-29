@@ -12,6 +12,7 @@ app.use(cors());
 const router = express.Router();
 
 const dbRoute =
+  process.env.MONGODB_URI ||
   "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(dbRoute, {
@@ -35,6 +36,10 @@ router.get("/getData", (req, res) => {
     return res.json({ success: true, data: data });
   });
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("prodaja_knjiga/build"));
+}
 
 app.use("/api", router);
 

@@ -4,8 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"cd .. && cd prodaja_knjiga && npm start\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "build": "cd prodaja_knjiga && npm run build",
+    "install-client": "cd prodaja_knjiga && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "concurrently \"node server.js\" \"cd prodaja_knjiga && npm start\""
   },
   "author": "",
   "license": "ISC",
