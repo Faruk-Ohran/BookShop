@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"cd backend && node server.js\" \"cd .. && cd prodaja_knjiga && npm start\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "heroku-postbuild": "concurrently \"cd prodaja_knjiga && NPM_CONFIG_PRODUCTION=false npm install npm && run build\""
   },
   "author": "",
   "license": "ISC",
