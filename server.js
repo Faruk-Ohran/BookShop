@@ -12,7 +12,7 @@ app.use(cors());
 const router = express.Router();
 
 const dbRoute =
-  process.env.MONGODB_URI ||
+  process.env.MONGODB_URL ||
   "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(dbRoute, {
