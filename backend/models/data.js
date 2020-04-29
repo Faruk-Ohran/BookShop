@@ -10,4 +10,4 @@ const DataSchema = new Schema({
   cijena: Number,
 });
 
-module.exports = mongoose.model("Data", DataSchema, "knjige");
+module.exports = mongoose.model("Data", DataSchema);

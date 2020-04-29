@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
+    "start": "concurrently \"node server.js\" \"cd .. && cd prodaja_knjiga && npm start\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
   },
   "author": "",
@@ -18,10 +18,10 @@
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0"
   },
-  "devDependencies": {},
-  "keywords": [],
-  "description": "",
   "engines": {
     "node": "10.16.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }
