@@ -6,12 +6,13 @@ const logger = require("morgan");
 const Data = require("./data");
 require("dotenv").config();
 
-const API_PORT = process.env.API_PORT;
+const API_PORT = "3001" || process.env.PORT;
 const app = express();
 app.use(cors());
 const router = express.Router();
 
-const dbRoute = process.env.dbRoute;
+const dbRoute =
+  "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
 
 mongoose.connect(dbRoute, {
   useNewUrlParser: true,
