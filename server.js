@@ -11,6 +11,9 @@ const app = express();
 app.use(cors());
 const router = express.Router();
 
+const dbRoute =
+  "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
+
 mongoose.connect(process.env.MONGODB_URI || dbRoute, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
