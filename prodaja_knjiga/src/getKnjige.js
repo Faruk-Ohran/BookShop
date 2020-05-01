@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Knjige from "./knjige";
 
 class ListaKnjiga extends Component {
@@ -6,29 +7,24 @@ class ListaKnjiga extends Component {
     super();
     this.state = {
       data: [],
-      intervalIsSet: false,
     };
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.getDataFromDb();
-    if (!this.state.intervalIsSet) {
-      let interval = setInterval(this.getDataFromDb, 1000);
-      this.setState({ intervalIsSet: interval });
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.state.intervalIsSet) {
-      clearInterval(this.state.intervalIsSet);
-      this.setState({ intervalIsSet: null });
-    }
-  }
+  };
 
   getDataFromDb = () => {
-    fetch("http://localhost:3001/api/getData")
-      .then((data) => data.json())
-      .then((res) => this.setState({ data: res.data }));
+    axios
+      .get("/api")
+      .then((response) => {
+        const data = response.data;
+        this.setState({ data: data });
+        console.log("Data has been received!!");
+      })
+      .catch(() => {
+        alert("Error retrieving data!!!");
+      });
   };
 
   render() {

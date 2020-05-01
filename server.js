@@ -1,45 +1,33 @@
 const express = require("express");
 const mongoose = require("mongoose");
-var cors = require("cors");
-const bodyParser = require("body-parser");
-const logger = require("morgan");
-const Data = require("./models/data");
-require("dotenv").config();
+const morgan = require("morgan");
+const path = require("path");
 
-const API_PORT = process.env.PORT || "3001";
 const app = express();
-app.use(cors());
-const router = express.Router();
+const PORT = process.env.PORT || 8080;
 
-const dbRoute =
+const routes = require("./routes/api");
+
+const MONGODB_URI =
   "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
 
-mongoose.connect(process.env.MONGODB_URI || dbRoute, {
+mongoose.connect(process.env.MONGODB_URI || MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-let db = mongoose.connection;
-
-db.once("open", () => console.log("connected to the database"));
-
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(logger("dev"));
-
-router.get("/getData", (req, res) => {
-  Data.find((err, data) => {
-    if (err) return res.json({ success: false, error: err });
-    return res.json({ success: true, data: data });
-  });
+mongoose.connection.on("connected", () => {
+  console.log("Mongoose is connected!!!!");
 });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("prodaja_knjiga/build"));
 }
 
-app.use("/api", router);
+app.use(morgan("tiny"));
+app.use("/api", routes);
 
-app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(PORT, console.log(`Server is starting at ${PORT}`));
