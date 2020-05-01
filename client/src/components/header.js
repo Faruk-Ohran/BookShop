@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Navbar, Form, FormControl, Button } from "react-bootstrap";
-import Knjige from "./getKnjige";
 
 class header extends Component {
   constructor() {

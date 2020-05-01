@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class nav extends Component {
   state = {
-    klik: false,
+    clicked: false,
   };
 
   render() {
@@ -13,7 +13,7 @@ class nav extends Component {
             <a
               className="nav-link active pocetna menu "
               type="button"
-              onClick={() => this.setState({ klik: !this.state.klik })}
+              onClick={() => this.setState({ clicked: !this.state.clicked })}
             >
               Menu
             </a>
@@ -21,7 +21,7 @@ class nav extends Component {
         </ul>
         <div className="nav-border">
           <div className="navigacija">
-            <div className={this.state.klik ? "menuOn" : "menuOff"}>
+            <div className={this.state.clicked ? "menuOn" : "menuOff"}>
               <ul className="nav nav-pills nav-fill navbar">
                 <ol className="nav-item">
                   <a className="nav-link" href="#">

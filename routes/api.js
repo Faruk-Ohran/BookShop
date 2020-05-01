@@ -1,16 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const Knjige = require("../models/data");
+const Books = require("../models/bookData");
 
 router.get("/", (req, res) => {
-  Knjige.find({})
+  Books.find({})
     .then((data) => {
-      console.log("Data: ", data);
       res.json(data);
     })
-    .catch((error) => {
-      console.log("error: ", daerrorta);
-    });
+    .catch((error) => {});
 });
 
 module.exports = router;

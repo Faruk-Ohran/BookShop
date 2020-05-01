@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const DataSchema = new Schema({
   id: Number,
-  naziv: String,
-  pisac: String,
-  opis: String,
-  kategorija: String,
-  cijena: Number,
+  name: String,
+  author: String,
+  description: String,
+  category: String,
+  price: Number,
 });
 
 module.exports = mongoose.model("Data", DataSchema);
