@@ -6,7 +6,7 @@ const logger = require("morgan");
 const Data = require("./models/data");
 require("dotenv").config();
 
-const API_PORT = "3001" || process.env.PORT;
+const API_PORT = process.env.PORT || "3001";
 const app = express();
 app.use(cors());
 const router = express.Router();
