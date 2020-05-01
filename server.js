@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
 const express = require("express");
+const mongoose = require("mongoose");
 var cors = require("cors");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
@@ -11,11 +11,7 @@ const app = express();
 app.use(cors());
 const router = express.Router();
 
-const dbRoute =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://faruk:faruk@cluster0-vap5z.mongodb.net/test?retryWrites=true&w=majority";
-
-mongoose.connect(dbRoute, {
+mongoose.connect(process.env.MONGODB_URI || dbRoute, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
