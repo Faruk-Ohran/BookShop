@@ -21,11 +21,7 @@ class ListBooks extends Component {
         const books = response.data;
         this.setState({ data: books });
       })
-      .catch((error) => {
-        console.log(error.response.data);
-        console.log(error.response.status);
-        console.log(error.response.headers);
-      });
+      .catch((error) => {});
   };
 
   render() {

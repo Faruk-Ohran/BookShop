@@ -4,18 +4,23 @@ import bookIcon from "../assets/400x400.png";
 const Books = ({ books }) => {
   const bookList = books.map((book) => {
     return (
-      <div className="columna col-12 col-sm-6 col-md-4" key={book.id}>
+      <div
+        className="columna col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
+        key={book.id}
+      >
         <img src={bookIcon} alt="Generic placeholder" />
-        <h5 className="mt-0 mb-1">{book.name}</h5>
-        <span className="pisac">{book.author}, </span>
-        <span className="kategorija">{book.category}</span> <br />
-        <span className="cijena">{book.price} KM</span>
+        <h5 className="name">{book.name}</h5>
+        <span className="author">{book.author}, </span>
+        <span className="category">{book.category}</span> <br />
+        <span className="price">{book.price} KM</span>
       </div>
     );
   });
   return (
-    <div className="container-fluid p-0">
-      <div className="row">{bookList}</div>
+    <div className="container books">
+      <div className="container-fluid p-0">
+        <div className="row">{bookList}</div>
+      </div>
     </div>
   );
 };
