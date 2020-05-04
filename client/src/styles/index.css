@@ -182,7 +182,7 @@ code {
 }
 
 .sideMenu {
-  margin: 15px 2% 0 0;
+  margin: 15px 0 0 0;
   padding-left: 10px;
   text-align: center;
 }
@@ -193,7 +193,7 @@ code {
 }
 
 .books {
-  margin: 50px 2% 10px 0;
+  margin: 50px 2% 10px 2%;
 }
 
 .books img {
