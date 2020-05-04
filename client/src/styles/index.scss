@@ -83,6 +83,7 @@ code {
     width: 0;
   }
 }
+
 @media only screen and (max-width: 991px) {
   .nav-border {
     font-family: Arial, Helvetica, sans-serif;
@@ -179,12 +180,11 @@ code {
       margin-right: auto;
     }
   }
-
-  .footer {
-    text-align: center;
-    background-color: honeydew;
-    box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-  }
+}
+.footer {
+  text-align: center;
+  background-color: honeydew;
+  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
 }
 
 @media only screen and (max-width: 300px) {
