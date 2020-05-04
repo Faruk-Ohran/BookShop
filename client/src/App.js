@@ -1,9 +1,8 @@
 import React from "react";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
-import SideMenu from "./components/sideMenu";
-import BookList from "./services/bookService";
 import Footer from "./components/footer";
+import Body from "./components/body";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -11,8 +10,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Navbar />
-      <SideMenu />
-      <BookList />
+      <Body />
       <Footer />
     </div>
   );
