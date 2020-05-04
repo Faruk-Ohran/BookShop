@@ -86,7 +86,9 @@ code {
 @media only screen and (max-width: 991px) {
   .nav-border {
     font-family: Arial, Helvetica, sans-serif;
-
+    .columna {
+      padding: 0;
+    }
     button {
       visibility: visible;
       margin: 10px 0 10px 10px;
@@ -101,6 +103,7 @@ code {
     ul {
       display: flex;
       flex-direction: column;
+      padding: 0;
     }
     .container {
       padding: 0;
@@ -126,7 +129,8 @@ code {
       }
     }
     a {
-      box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
+      box-shadow: 0px 1px 0px 0px rgba(128, 128, 128, 1);
+      border-radius: 0 !important;
     }
     a:hover {
       border: 0px;
@@ -139,12 +143,10 @@ code {
   padding-left: 10px;
   text-align: center;
   float: left;
-}
-
-.footer {
-  text-align: center;
-  background-color: honeydew;
-  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
+  a {
+    border-left: hidden;
+    border-right: hidden;
+  }
 }
 
 .books {
@@ -172,9 +174,16 @@ code {
   }
   @media only screen and (max-width: 767px) {
     .columna {
+      max-width: fit-content;
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .footer {
+    text-align: center;
+    background-color: honeydew;
+    box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
   }
 }
 

@@ -20,7 +20,7 @@ class nav extends Component {
                 Menu
               </Button>
             </div>
-            <div className="col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11">
+            <div className="columna col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11">
               <div className={this.state.clicked ? "showNav" : "hideNav"}>
                 <ul className="nav nav-pills nav-fill navbar">
                   <ol className="nav-item">
