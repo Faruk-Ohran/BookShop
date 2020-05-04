@@ -10,7 +10,7 @@ class nav extends Component {
     return (
       <div className="nav-border">
         <div className="container">
-          <div className="row w-100">
+          <div className="row w-100 justify-content-center ">
             <div className="menuDivBtn">
               <Button
                 onClick={() => this.setState({ clicked: !this.state.clicked })}

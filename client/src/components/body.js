@@ -5,8 +5,10 @@ import ListBooks from "../services/bookService";
 function body() {
   return (
     <div className="wrapper">
-      <SideMenu />
-      <ListBooks />
+      <div className="container">
+        <SideMenu />
+        <ListBooks />
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ const Books = ({ books }) => {
     );
   });
   return (
-    <div className="books">
+    <div className="container books">
       <div className="container-fluid p-0">
         <div className="row">{bookList}</div>
       </div>

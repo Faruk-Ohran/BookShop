@@ -16,7 +16,7 @@ class header extends Component {
   render() {
     return (
       <Navbar className="header w-100" bg="light" expand="lg">
-        <div className="w-100 justify-content-sm-center">
+        <div className="container w-100 justify-content-sm-center">
           <div className="row w-100">
             <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-4">
               <svg

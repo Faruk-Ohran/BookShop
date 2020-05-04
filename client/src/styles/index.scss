@@ -51,7 +51,7 @@ code {
       }
     }
   }
-  @media only screen and (max-width: 728px) {
+  @media only screen and (max-width: 767px) {
     font-family: Arial, Helvetica, sans-serif;
     form {
       width: 100%;
@@ -139,9 +139,13 @@ code {
 }
 
 .wrapper {
-  display: flex;
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
+  margin-top: 25px;
+  .container {
+    display: flex;
+
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -157,7 +161,7 @@ code {
 }
 
 .books {
-  margin: 50px 2% 10px 2%;
+  margin: 50px 0 10px 0;
   img {
     max-width: 100%;
     max-height: 100%;
