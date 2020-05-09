@@ -2,17 +2,6 @@ import React, { Component } from "react";
 import { Navbar, Form, FormControl, Button } from "react-bootstrap";
 
 class header extends Component {
-  constructor() {
-    super();
-    this.state = {
-      search: "",
-    };
-  }
-
-  updateSearch = (e) => {
-    this.setState({ search: e.target.value });
-  };
-
   render() {
     return (
       <Navbar className="header w-100" bg="light" expand="lg">
@@ -45,8 +34,8 @@ class header extends Component {
             <div className="form col-12 col-sm-6 col-md-7 col-lg-8 col-xl-8">
               <Form
                 inline
-                value={this.state.search}
-                onChange={this.updateSearch.bind(this)}
+                value={this.props.data.search}
+                onChange={this.props.data.updateSearch}
               >
                 <FormControl
                   type="text"

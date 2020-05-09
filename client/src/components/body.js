@@ -2,12 +2,12 @@ import React from "react";
 import SideMenu from "./sideMenu";
 import Books from "./books";
 
-function body() {
+function body({ books, search }) {
   return (
     <div className="wrapper">
       <div className="container">
         <SideMenu />
-        <Books />
+        <Books search={search} books={books} />
       </div>
     </div>
   );
