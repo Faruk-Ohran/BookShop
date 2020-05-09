@@ -42,7 +42,7 @@ class header extends Component {
                 Prodavnica knjiga
               </Navbar.Brand>
             </div>
-            <div className="col-12 col-sm-6 col-md-7 col-lg-8 col-xl-8">
+            <div className="form col-12 col-sm-6 col-md-7 col-lg-8 col-xl-8">
               <Form
                 inline
                 value={this.state.search}

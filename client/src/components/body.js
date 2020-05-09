@@ -1,13 +1,13 @@
 import React from "react";
 import SideMenu from "./sideMenu";
-import ListBooks from "../services/bookService";
+import Books from "./books";
 
 function body() {
   return (
     <div className="wrapper">
       <div className="container">
         <SideMenu />
-        <ListBooks />
+        <Books />
       </div>
     </div>
   );
