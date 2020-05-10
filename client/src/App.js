@@ -5,8 +5,7 @@ import Footer from "./components/footer";
 import Body from "./components/body";
 
 import { getBooksFromDb } from "./services/bookService";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import books from "./components/books";
 
 class App extends Component {
   constructor(props) {
@@ -19,8 +18,13 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    let books = await getBooksFromDb();
+    const books = await getBooksFromDb();
     this.setState({ books: books });
+  }
+
+  sortBooksNew() {
+    const booksReverse = this.state.books.reverse();
+    this.setState({ books: booksReverse });
   }
 
   updateSearch = (e) => {
@@ -37,7 +41,11 @@ class App extends Component {
           }}
         />
         <Navbar />
-        <Body search={this.state.search} books={this.state.books} />
+        <Body
+          sortBooksNew={this.sortBooksNew.bind(this)}
+          search={this.state.search}
+          books={this.state.books}
+        />
         <Footer />
       </div>
     );

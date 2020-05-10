@@ -42,7 +42,7 @@ class header extends Component {
                   placeholder="Pretraži sve knjige"
                   className="mr-sm-2"
                 />
-                <Button type="button" className="btn btn-outline-secondary">
+                <Button type="submit" className="btn btn-outline-secondary">
                   Pretraži
                 </Button>
               </Form>
