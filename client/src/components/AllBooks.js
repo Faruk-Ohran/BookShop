@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import bookIcon from "../assets/web.png";
+import bookIcon from "../assets/ruza.jpg";
 
 export class AllBooks extends Component {
   constructor(props) {
