@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import SideMenu from "./SideMenu";
-import AllBooks from "./AllBooks";
+import SideMenu from "./sideMenu";
+import AllBooks from "./allBooks";
 
 export class Body extends Component {
   render() {

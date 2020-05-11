@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Body from "./components/Body";
+import Header from "./components/header";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import Body from "./components/body";
 
 import { getBooksFromDb } from "./services/bookService";
 
