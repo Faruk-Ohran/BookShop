@@ -1,27 +1,43 @@
 import React, { Component } from "react";
 
-class sideMenu extends Component {
+class SideMenu extends Component {
   render() {
     return (
       <div className="sideMenu col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
         <h4>Kategorija</h4>
         <div className="list-group">
-          <a href="#" className="list-group-item list-group-item-action">
+          <button
+            className="list-group-item list-group-item-action"
+            value=""
+            onClick={this.props.updateCategory}
+          >
             Sve knjige
-          </a>
-          <a href="#" className="list-group-item list-group-item-action">
+          </button>
+          <button
+            className="list-group-item list-group-item-action"
+            value="Roman"
+            onClick={this.props.updateCategory}
+          >
             Roman
-          </a>
-          <a href="#" className="list-group-item list-group-item-action">
+          </button>
+          <button
+            className="list-group-item list-group-item-action"
+            value="Drama"
+            onClick={this.props.updateCategory}
+          >
             Drama
-          </a>
-          <a href="#" className="list-group-item list-group-item-action">
+          </button>
+          <button
+            className="list-group-item list-group-item-action"
+            value="Poezija"
+            onClick={this.props.updateCategory}
+          >
             Poezija
-          </a>
+          </button>
         </div>
       </div>
     );
   }
 }
 
-export default sideMenu;
+export default SideMenu;

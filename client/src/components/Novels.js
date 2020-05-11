@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import bookIcon from "../assets/400x400.png";
 
-export class books extends Component {
+export class Novels extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       sort: "Najnovije",
+      novels: "Roman",
     };
   }
 
@@ -18,9 +19,7 @@ export class books extends Component {
 
   render() {
     const filteredBooks = Object.values(this.props.books).filter((book) => {
-      return (
-        book.name.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1
-      );
+      return book.category.indexOf(this.state.novels) !== -1;
     });
 
     return (
@@ -73,4 +72,4 @@ export class books extends Component {
   }
 }
 
-export default books;
+export default Novels;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 
-class nav extends Component {
+class Navbar extends Component {
   state = {
     clicked: false,
   };
@@ -63,4 +63,4 @@ class nav extends Component {
   }
 }
 
-export default nav;
+export default Navbar;

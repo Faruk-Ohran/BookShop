@@ -1,16 +1,32 @@
-import React from "react";
-import SideMenu from "./sideMenu";
-import Books from "./books";
+import React, { Component } from "react";
+import SideMenu from "./SideMenu";
+import AllBooks from "./AllBooks";
 
-function body({ books, search, sortBooksNew }) {
-  return (
-    <div className="wrapper">
-      <div className="container">
-        <SideMenu />
-        <Books sortBooksNew={sortBooksNew} search={search} books={books} />
+export class Body extends Component {
+  render() {
+    const {
+      books,
+      search,
+      sortBooksNew,
+      updateCategory,
+      category,
+    } = this.props;
+    return (
+      <div>
+        <div className="wrapper">
+          <div className="container">
+            <SideMenu updateCategory={updateCategory} />
+            <AllBooks
+              sortBooksNew={sortBooksNew}
+              search={search}
+              books={books}
+              category={category}
+            />
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default body;
+export default Body;

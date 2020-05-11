@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, Form, FormControl, Button } from "react-bootstrap";
 
-class header extends Component {
+class Header extends Component {
   render() {
     return (
       <Navbar className="header w-100" bg="light" expand="lg">
@@ -54,4 +54,4 @@ class header extends Component {
   }
 }
 
-export default header;
+export default Header;

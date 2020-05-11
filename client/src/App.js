@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Header from "./components/header";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Body from "./components/body";
+
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Body from "./components/Body";
 
 import { getBooksFromDb } from "./services/bookService";
-import books from "./components/books";
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       books: "",
       search: "",
+      category: "",
     };
   }
 
@@ -31,6 +32,10 @@ class App extends Component {
     this.setState({ search: e.target.value });
   };
 
+  updateCategory = (e) => {
+    this.setState({ category: e.target.value });
+  };
+
   render() {
     return (
       <div>
@@ -45,7 +50,10 @@ class App extends Component {
           sortBooksNew={this.sortBooksNew.bind(this)}
           search={this.state.search}
           books={this.state.books}
+          updateCategory={this.updateCategory.bind(this)}
+          category={this.state.category}
         />
+
         <Footer />
       </div>
     );

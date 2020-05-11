@@ -1,6 +1,6 @@
 import React from "react";
 
-function footer() {
+function Footer() {
   return (
     <footer className="footer">
       <span>&copy; 2020 Ohran</span>
@@ -8,4 +8,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;
