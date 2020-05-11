@@ -16,6 +16,7 @@ mongoose.connect(process.env.MONGODB_URI || process.env.MONGODB_URL, {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use("/uploads", express.static("uploads"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

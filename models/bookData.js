@@ -8,6 +8,7 @@ const DataSchema = new Schema({
   description: String,
   category: String,
   price: Number,
+  bookImage: String,
 });
 
 module.exports = mongoose.model("Data", DataSchema);

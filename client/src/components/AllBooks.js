@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import bookIcon from "../assets/mainpageorg.jpg";
 
 export class AllBooks extends Component {
   constructor(props) {
@@ -57,13 +56,13 @@ export class AllBooks extends Component {
           </div>
           <div className="row">
             {searchBooks.length <= 0
-              ? "LOADING..."
+              ? "Nema rezultata..."
               : searchBooks.map((book) => (
                   <div
                     className="columna col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                     key={book.id}
                   >
-                    <img src={bookIcon} alt="Generic placeholder" />
+                    <img src={book.bookImage} alt="Generic placeholder" />
                     <h5 className="name">{book.name}</h5>
                     <span className="author">{book.author}, </span>
                     <span className="category">{book.category}</span> <br />
