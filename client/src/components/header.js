@@ -40,11 +40,8 @@ class Header extends Component {
                 <FormControl
                   type="text"
                   placeholder="Pretraži sve knjige"
-                  className="mr-sm-2"
+                  className="mr-sm-2 pretrazi"
                 />
-                <Button type="submit" className="btn btn-outline-secondary">
-                  Pretraži
-                </Button>
               </Form>
             </div>
           </div>
