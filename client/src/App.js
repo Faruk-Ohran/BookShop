@@ -50,8 +50,8 @@ class App extends Component {
           sortBooksNew={this.sortBooksNew.bind(this)}
           search={this.state.search}
           books={this.state.books}
-          updateCategory={this.updateCategory.bind(this)}
           category={this.state.category}
+          updateCategory={this.updateCategory.bind(this)}
         />
 
         <Footer />

@@ -8,22 +8,19 @@ export class Body extends Component {
       books,
       search,
       sortBooksNew,
-      updateCategory,
       category,
+      updateCategory,
     } = this.props;
     return (
-      <div>
-        <div className="wrapper">
-          <div className="container">
-            <SideMenu updateCategory={updateCategory} />
-            <AllBooks
-              sortBooksNew={sortBooksNew}
-              search={search}
-              books={books}
-              category={category}
-            />
-          </div>
-        </div>
+      <div className="wrapper container">
+        <SideMenu updateCategory={updateCategory} />
+
+        <AllBooks
+          sortBooksNew={sortBooksNew}
+          search={search}
+          books={books}
+          category={category}
+        />
       </div>
     );
   }
