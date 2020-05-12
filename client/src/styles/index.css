@@ -29,6 +29,10 @@ code {
   padding-left: 10px;
 }
 
+.header .brand-name {
+  padding: 0 0 0 15px;
+}
+
 .header input {
   border-radius: 20px;
 }
