@@ -30,9 +30,9 @@ class Navbar extends Component {
                     </Link>
                   </ol>
                   <ol className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link to="/books" className="nav-link">
                       Knjige
-                    </a>
+                    </Link>
                   </ol>
                   <ol className="nav-item">
                     <a className="nav-link" href="#">

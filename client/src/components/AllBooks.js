@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { getBooksFromDb } from "../services/bookService";
 
 export class AllBooks extends Component {
   constructor(props) {
@@ -7,7 +8,13 @@ export class AllBooks extends Component {
 
     this.state = {
       sort: "Najnovije",
+      books: "",
     };
+  }
+
+  async componentDidMount() {
+    const books = await getBooksFromDb();
+    this.setState({ books: books });
   }
 
   changeSortName() {
@@ -16,8 +23,14 @@ export class AllBooks extends Component {
       : this.setState({ sort: "Najstarije" });
   }
 
+  sortBooksNew() {
+    const booksReverse = this.state.books.reverse();
+    this.setState({ books: booksReverse });
+  }
+
   render() {
-    const filteredBooks = Object.values(this.props.books).filter((book) => {
+    const { books } = this.state;
+    const filteredBooks = Object.values(books).filter((book) => {
       return book.category.indexOf(this.props.category) !== -1;
     });
 
@@ -48,7 +61,7 @@ export class AllBooks extends Component {
                 href="#"
                 onClick={() => {
                   this.changeSortName();
-                  this.props.sortBooksNew();
+                  this.sortBooksNew();
                 }}
               >
                 {this.state.sort}
@@ -63,7 +76,7 @@ export class AllBooks extends Component {
                     className="columna col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                     key={book.id}
                   >
-                    <Link to={"/" + book.name}>
+                    <Link to={"/books/" + book.name}>
                       <div className="book-image">
                         <img src={book.bookImage} alt="Generic placeholder" />
                       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Form, FormControl } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
@@ -28,8 +29,8 @@ class Header extends Component {
                     clipRule="evenodd"
                   />
                 </svg>
-                <Navbar.Brand className="brandName" href="#home">
-                  Prodavnica knjiga
+                <Navbar.Brand className="brandName">
+                  <Link to="/">Prodavnica knjiga</Link>
                 </Navbar.Brand>
               </div>
               <div className="form col-12 col-sm-6 col-md-7 col-lg-8 col-xl-8">
