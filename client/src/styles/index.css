@@ -224,6 +224,20 @@ code {
   }
 }
 
+.selected-book {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selected-book .row {
+  display: inline-block;
+}
+
+.selected-book .book-info {
+  width: 350px;
+  text-align: justify;
+}
+
 .footer {
   text-align: center;
   background-color: honeydew;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class AllBooks extends Component {
   constructor(props) {
@@ -62,15 +63,17 @@ export class AllBooks extends Component {
                     className="columna col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4"
                     key={book.id}
                   >
-                    <div className="book-image">
-                      <img src={book.bookImage} alt="Generic placeholder" />
-                    </div>
-                    <div className="book-info">
-                      <h5 className="name">{book.name}</h5>
-                      <span className="author">{book.author}, </span>
-                      <span className="category">{book.category}</span> <br />
-                      <span className="price">{book.price} KM</span>
-                    </div>
+                    <Link to={"/" + book.name}>
+                      <div className="book-image">
+                        <img src={book.bookImage} alt="Generic placeholder" />
+                      </div>
+                      <div className="book-info">
+                        <h5 className="name">{book.name}</h5>
+                        <span className="author">{book.author}, </span>
+                        <span className="category">{book.category}</span> <br />
+                        <span className="price">{book.price} KM</span>
+                      </div>
+                    </Link>
                   </div>
                 ))}
           </div>

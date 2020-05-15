@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
   state = {
@@ -24,9 +25,9 @@ class Navbar extends Component {
               <div className={this.state.clicked ? "showNav" : "hideNav"}>
                 <ul className="nav nav-pills nav-fill navbar">
                   <ol className="nav-item">
-                    <a className="nav-link" href="#">
+                    <Link to="/" className="nav-link">
                       Početna
-                    </a>
+                    </Link>
                   </ol>
                   <ol className="nav-item">
                     <a className="nav-link" href="#">

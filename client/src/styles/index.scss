@@ -180,6 +180,19 @@ code {
     }
   }
 }
+
+.selected-book {
+  margin-top: 20px;
+  text-align: center;
+  .row {
+    display: inline-block;
+  }
+  .book-info {
+    width: 350px;
+    text-align: justify;
+  }
+}
+
 .footer {
   text-align: center;
   background-color: honeydew;
