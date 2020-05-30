@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
-import Header from "./components/header";
-import Navbar from "./components/navbar";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import Footer from "./components/footer";
 import Body from "./components/body";
@@ -36,7 +35,6 @@ class App extends Component {
               updateSearch: this.updateSearch.bind(this),
             }}
           />
-          <Navbar />
           <Route exact path="/" component={Home} />
           <Route
             exact

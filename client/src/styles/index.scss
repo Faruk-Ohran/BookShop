@@ -4,7 +4,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
 }
 
 * {
@@ -18,37 +17,101 @@ code {
     monospace;
 }
 
-.header {
+.Header {
   position: sticky;
-  top: 0px;
   z-index: 10;
-  font-family: cursive;
-  -webkit-box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-  -moz-box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-  .brandName {
-    padding-left: 10px;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #ab8f8f;
+  .right {
+    display: flex;
+    flex-direction: column-reverse;
   }
-  .brand-name {
-    padding: 0 0 0 15px;
-  }
-  input {
-    border-radius: 20px;
-  }
-  .pretrazi {
-    width: 100% !important;
-  }
-  .row {
-    margin-left: auto;
-    margin-right: auto;
+  .right-reverse {
+    flex-direction: column;
   }
 
-  @media only screen and (max-width: 992px) {
-    font-family: Arial, Helvetica, sans-serif;
+  form {
+    width: 100%;
+    visibility: hidden;
+    input {
+      width: 100%;
+      border-radius: 20px;
+    }
   }
-  @media only screen and (max-width: 575px) {
-    .brandName {
-      float: right;
+  .Logo {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    .Brand-name {
+      height: 20px;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+  }
+  .Navigation {
+    height: 50px;
+    margin: 10px 0 0 0;
+    display: flex;
+  }
+  .hide {
+    visibility: hidden;
+  }
+  .show {
+    visibility: visible;
+  }
+
+  ul {
+    img {
+      height: 30px;
+      margin: 5px 5px 0 5px;
+    }
+    ol {
+      margin: 0 5px 0 5px;
+      width: 120px;
+      height: 40px;
+      background: #c4c4c4;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      padding-top: 7px;
+    }
+    .Button {
+      padding: 0;
+    }
+    .Button:hover {
+      background-color: rgb(138, 14, 14);
+
+      .Home,
+      .Books {
+        transition: 0.5s;
+        color: #c4c4c4;
+      }
+    }
+    .Button-sign:hover {
+      background-color: #c4c4c4;
+      .Sign {
+        transition: 0.5s;
+        color: rgb(138, 14, 14);
+      }
+    }
+    .Home,
+    .Books {
+      color: rgb(138, 14, 14);
+      text-decoration: none;
+    }
+    .Button-sign {
+      background: rgb(138, 14, 14);
+    }
+    .Sign {
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 0;
     }
   }
 }
@@ -196,11 +259,17 @@ code {
 
 .footer {
   text-align: center;
-  background-color: honeydew;
+  background: #ab8f8f;
   box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
 }
 @media only screen and (max-width: 300px) {
   * {
     font-size: 11px;
   }
+}
+
+.Home-page {
+  background-image: url("../assets/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
