@@ -2,9 +2,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="row footer">
-      <div className="col-6">Design by zecijaaa</div>
-      <div className="col-6">&copy; 2020 Ohran</div>
+    <div className="footer">
+      <div className="container">
+        <div>Design by zecijaaa</div>
+        <div>&copy; 2020 Ohran</div>
+      </div>
     </div>
   );
 }

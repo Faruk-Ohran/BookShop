@@ -17,177 +17,108 @@ code {
     monospace;
 }
 
-.Header {
-  position: sticky;
-  z-index: 10;
-  top: 0;
+.header {
   width: 100%;
-  height: 100px;
-  background: #ab8f8f;
-  .right {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .right-reverse {
-    flex-direction: column;
-  }
+  background-color: #ab8f8f;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  .container {
+    .collapse {
+      justify-content: flex-end;
+    }
+    .navbar-nav {
+      margin-right: 0 !important;
+    }
+    nav {
+      background-color: #ab8f8f !important;
 
-  form {
-    width: 100%;
-    visibility: hidden;
-    input {
-      width: 100%;
-      border-radius: 20px;
-    }
-  }
-  .Logo {
-    display: flex;
-    color: black;
-    text-decoration: none;
-    margin-top: 20px;
-    .Brand-name {
-      height: 20px;
-      margin-top: 40px;
-      font-weight: bold;
-    }
-  }
-  .Navigation {
-    height: 50px;
-    margin: 10px 0 0 0;
-    display: flex;
-  }
-  .hide {
-    visibility: hidden;
-  }
-  .show {
-    visibility: visible;
-  }
-
-  ul {
-    img {
-      height: 30px;
-      margin: 5px 5px 0 5px;
-    }
-    ol {
-      margin: 0 5px 0 5px;
-      width: 120px;
-      height: 40px;
-      background: #c4c4c4;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: center;
-      padding-top: 7px;
-    }
-    .Button {
-      padding: 0;
-    }
-    .Button:hover {
-      background-color: rgb(138, 14, 14);
-
-      .Home,
-      .Books {
+      a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+      }
+      a.nav-link {
+        margin: 0 5px 0 5px;
+        width: 120px;
+        height: 40px;
+        background: #c4c4c4;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        color: rgb(138, 14, 14);
+      }
+      a.nav-link:hover {
+        background-color: rgb(138, 14, 14);
         transition: 0.5s;
         color: #c4c4c4;
       }
-    }
-    .Button-sign:hover {
-      background-color: #c4c4c4;
-      .Sign {
+      #basic-nav-dropdown {
+        background-color: rgb(138, 14, 14);
+        color: #c4c4c4;
+      }
+      #basic-nav-dropdown:hover {
+        background: #c4c4c4;
         transition: 0.5s;
         color: rgb(138, 14, 14);
       }
     }
-    .Home,
-    .Books {
-      color: rgb(138, 14, 14);
-      text-decoration: none;
-    }
-    .Button-sign {
-      background: rgb(138, 14, 14);
-    }
-    .Sign {
-      color: white;
-      text-decoration: none;
+    input {
       border-radius: 20px;
-      padding: 0;
+    }
+    input:target {
+      border: 0;
+    }
+    .form-control:focus {
+      border-color: rgb(138, 14, 14);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(255, 0, 0, 0.6);
+    }
+    .hideSearch {
+      opacity: 0;
+    }
+    .showSearch {
+      opacity: 1;
+      transition: 1s;
+    }
+    .dropdown-menu {
+      border-radius: 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: 0;
+      background-color: #ab8f8f;
+    }
+    .dropdown-item {
+      background: #c4c4c4;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 20px;
+      color: rgb(138, 14, 14);
+      text-align: center;
+      width: 120px;
+      margin-left: 15%;
+    }
+    .dropdown-item:hover {
+      background: rgb(138, 14, 14);
+      color: #c4c4c4;
+      transition: 0.5s;
     }
   }
-}
-
-.nav-border {
-  button {
-    background-color: grey;
-    color: white;
-    visibility: hidden;
-  }
-  font-family: cursive;
-  box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-  a {
-    color: black;
-  }
-  a:hover {
-    border-right: 1px solid blue;
-    border-left: 1px solid blue;
-  }
-  .menuDivBtn {
-    height: 0;
-    width: 0;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .nav-border {
-    font-family: Arial, Helvetica, sans-serif;
-    .columna {
-      padding: 0;
+  @media only screen and (max-width: 991px) {
+    a.nav-link {
+      margin-top: 5px !important;
+      margin-bottom: 5px !important;
     }
-    button {
-      visibility: visible;
-      margin: 10px 10px 10px 0;
-      float: right;
-    }
-    .menuDivBtn {
-      height: auto;
-      width: auto;
-    }
-    ol {
-      width: 100%;
-    }
-    ul {
+    .navbar-collapse {
       display: flex;
-      flex-direction: column;
-      padding: 0;
+      flex-direction: column-reverse;
+      align-items: flex-start;
     }
-    .container {
-      padding: 0;
-      box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
-    }
-    .row {
-      margin: 0;
-    }
-    .showNav {
-      width: 100% !important;
-    }
-    .changeW {
-      padding: 0;
-      width: 100% !important;
-    }
-    .hideNav {
-      width: 0;
-      height: 0;
-      visibility: hidden;
-      ul {
-        width: 0;
-        height: 0;
-      }
-    }
-    a {
-      box-shadow: 0px 1px 0px 0px rgba(128, 128, 128, 1);
-      border-radius: 0 !important;
-    }
-    a:hover {
-      border: 0px;
+  }
+  @media only screen and (max-width: 300px) {
+    a.nav-link,
+    input {
+      height: 25px !important;
     }
   }
 }
@@ -261,7 +192,12 @@ code {
   text-align: center;
   background: #ab8f8f;
   box-shadow: 0px 1px 3px 0px rgba(128, 128, 128, 1);
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
 @media only screen and (max-width: 300px) {
   * {
     font-size: 11px;
