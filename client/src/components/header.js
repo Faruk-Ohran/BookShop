@@ -18,7 +18,6 @@ class Header extends Component {
             <Navbar.Brand>
               <Link to="/">BOOKSTORE</Link>
             </Navbar.Brand>
-
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Form

@@ -109,11 +109,6 @@ code {
       margin-top: 5px !important;
       margin-bottom: 5px !important;
     }
-    .navbar-collapse {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: flex-start;
-    }
   }
   @media only screen and (max-width: 300px) {
     a.nav-link,
