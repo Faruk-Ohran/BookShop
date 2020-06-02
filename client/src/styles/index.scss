@@ -140,7 +140,10 @@ code {
   button {
     background-color: black;
   }
-  .price {
+  .price,
+  .author,
+  .category,
+  .name {
     font-weight: bold;
   }
 }
@@ -152,9 +155,10 @@ code {
 
     padding-top: 5px;
     .book-info-slide {
-      background-color: rgb(252, 248, 248);
+      background-color: #ab8f8f81;
+      border: 1px solid black;
+      color: black;
       width: 250px;
-      border-bottom-left-radius: 20px;
       margin-left: auto;
       margin-right: auto;
       .price {
@@ -164,6 +168,7 @@ code {
     .slider-inside {
       flex-direction: column;
       height: 400px;
+      margin: 0;
     }
     .slick-next {
       margin-right: 20px;
@@ -193,18 +198,11 @@ code {
 
 .home-page {
   height: 89.5vh;
-  background: url("../assets/Group1.png") no-repeat center center;
+  background: url("../assets/Background.png") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  .girl {
-    width: 500px;
-    position: fixed;
-    right: -20px;
-    top: -20px;
-    z-index: 1;
-  }
 }
 .wrapper {
   margin-top: 25px;

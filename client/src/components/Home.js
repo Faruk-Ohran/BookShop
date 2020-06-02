@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "./Slider";
-import girl from "../assets/girl.png";
 
 function Home() {
   return (
