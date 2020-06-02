@@ -28,14 +28,14 @@ class SimpleSlider extends Component {
     const { books } = this.state;
     return (
       <div className="slider">
-        <h1>Najnovije</h1>
+        <div className="container">
+          <h3>Najnovije</h3>
+        </div>
         <Slider {...settings}>
           {Object.values(books).map((book) => (
             <div className="slider-inside">
-              <div>
-                <img src={book.bookImage} alt="Generic placeholder" />
-              </div>
-              <div className="book-info">
+              <img src={book.bookImage} alt="Generic placeholder" />
+              <div className="book-info-slide">
                 <h5 className="name">{book.name}</h5>
                 <span className="author">{book.author}, </span>
                 <span className="category">{book.category}</span> <br />

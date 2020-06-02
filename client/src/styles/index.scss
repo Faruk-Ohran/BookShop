@@ -119,30 +119,51 @@ code {
 }
 
 .slider {
-  width: 40%;
-  position: absolute;
-  top: 150px;
-  left: 40%;
+  width: 50%;
+  padding: 10px 0 0 0;
+  z-index: 2;
   .slider-inside {
     display: flex !important;
+    height: 300px;
+    margin: 0 15px 0 15px;
   }
-  .slick-slide {
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      height: 300px;
-    }
+  .book-info-slide {
+    margin-right: auto;
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  img {
+    width: 250px;
+    margin-left: auto;
   }
   button {
     background-color: black;
   }
+  .price {
+    font-weight: bold;
+  }
 }
+
 @media only screen and (max-width: 991px) {
   .slider {
     position: static;
     width: 100%;
+
+    padding-top: 5px;
+    .book-info-slide {
+      background-color: rgb(252, 248, 248);
+      width: 250px;
+      border-bottom-left-radius: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      .price {
+        font-weight: bold;
+      }
+    }
     .slider-inside {
       flex-direction: column;
+      height: 400px;
     }
     .slick-next {
       margin-right: 20px;
@@ -152,10 +173,20 @@ code {
       z-index: 100;
     }
   }
-  img {
-    width: 200px;
+  h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
   }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .slick-dots {
+    visibility: hidden;
+  }
+  .girl {
     visibility: hidden;
   }
 }
@@ -167,6 +198,13 @@ code {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  .girl {
+    width: 500px;
+    position: fixed;
+    right: -20px;
+    top: -20px;
+    z-index: 1;
+  }
 }
 .wrapper {
   margin-top: 25px;

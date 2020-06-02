@@ -139,38 +139,61 @@ code {
 }
 
 .slider {
-  width: 40%;
-  position: absolute;
-  top: 150px;
-  left: 40%;
+  width: 50%;
+  padding: 10px 0 0 0;
+  z-index: 2;
 }
 
 .slider .slider-inside {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  height: 300px;
+  margin: 0 15px 0 15px;
 }
 
-.slider .slick-slide img {
-  margin-left: auto;
+.slider .book-info-slide {
   margin-right: auto;
-  height: 300px;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.slider img {
+  width: 250px;
+  margin-left: auto;
 }
 
 .slider button {
   background-color: black;
 }
 
+.slider .price {
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 991px) {
   .slider {
     position: static;
     width: 100%;
+    padding-top: 5px;
+  }
+  .slider .book-info-slide {
+    background-color: #fcf8f8;
+    width: 250px;
+    border-bottom-left-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slider .book-info-slide .price {
+    font-weight: bold;
   }
   .slider .slider-inside {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 400px;
   }
   .slider .slick-next {
     margin-right: 20px;
@@ -179,10 +202,19 @@ code {
     margin-left: 20px;
     z-index: 100;
   }
+  h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
   img {
-    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .slick-dots {
+    visibility: hidden;
+  }
+  .girl {
     visibility: hidden;
   }
 }
@@ -191,6 +223,14 @@ code {
   height: 89.5vh;
   background: url("../assets/Group1.png") no-repeat center center;
   background-size: cover;
+}
+
+.home-page .girl {
+  width: 500px;
+  position: fixed;
+  right: -20px;
+  top: -20px;
+  z-index: 1;
 }
 
 .wrapper {
