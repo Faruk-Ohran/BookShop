@@ -141,10 +141,12 @@ code {
 .home-page {
   width: 100%;
   height: 89vh;
-  position: -webkit-sticky;
+  /*
   position: sticky;
   background-image: url("../assets/Background1.png");
   background-repeat: no-repeat;
+  background-size: cover;*/
+  background: url("../assets/Background1.png") no-repeat center center fixed;
   background-size: cover;
 }
 
