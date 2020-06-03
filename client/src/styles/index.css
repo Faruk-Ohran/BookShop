@@ -15,6 +15,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.App {
+  background: #fcf8f8;
+}
+
 .header {
   width: 100%;
   background-color: #ab8f8f;
@@ -221,6 +225,9 @@ code {
   }
   .girl {
     visibility: hidden;
+  }
+  .home-page {
+    background: #fcf8f8 !important;
   }
 }
 

@@ -16,7 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.App {
+  background: rgb(252, 248, 248);
+}
 .header {
   width: 100%;
   background-color: #ab8f8f;
@@ -152,7 +154,6 @@ code {
   .slider {
     position: static;
     width: 100%;
-
     padding-top: 5px;
     .book-info-slide {
       background-color: #ab8f8f81;
@@ -193,6 +194,10 @@ code {
   }
   .girl {
     visibility: hidden;
+  }
+
+  .home-page {
+    background: rgb(252, 248, 248) !important;
   }
 }
 

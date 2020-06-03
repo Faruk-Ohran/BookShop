@@ -29,7 +29,7 @@ class SimpleSlider extends Component {
     return (
       <div className="slider">
         <div className="container">
-          <h3>Najnovije</h3>
+          <h3>New books</h3>
         </div>
         <Slider {...settings}>
           {Object.values(books).map((book) => (
