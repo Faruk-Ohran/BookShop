@@ -1,17 +1,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 const morgan = require("morgan");
+const passport = require("passport");
 const path = require("path");
 require("dotenv").config();
-//dodano
-const bodyParser = require("body-parser");
 
-const passport = require("passport");
+const routes = require("./routes/api");
 
 const app = express();
 const PORT = process.env.PORT || process.env.POORT;
-
-const routes = require("./routes/api");
 
 // Bodyparser middleware sve dodano
 app.use(
@@ -34,15 +32,6 @@ app.use("/books/uploads", express.static("uploads"));
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// app.use(express.static("public"));
-// app.use(express.cookieParser());
-// app.use(express.bodyParser());
-// app.use(express.session({ secret: "keyboard cat" }));
-// app.use(passport.initialize());
-// require("./config/passport")(passport);
-// app.use(passport.session());
-// app.use(app.router);
 
 //Passport middleware
 app.use(passport.initialize());

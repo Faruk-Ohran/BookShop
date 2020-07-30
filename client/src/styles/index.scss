@@ -40,7 +40,8 @@ code {
         color: black;
         text-decoration: none;
       }
-      a.nav-link {
+      a.nav-link,
+      .logout {
         margin: 0 5px 0 5px;
         width: 120px;
         height: 40px;
@@ -55,11 +56,12 @@ code {
         transition: 0.5s;
         color: #c4c4c4;
       }
-      #basic-nav-dropdown {
+      .logout {
         background-color: rgb(138, 14, 14);
         color: #c4c4c4;
+        font-weight: bold;
       }
-      #basic-nav-dropdown:hover {
+      .logout:hover {
         background: #c4c4c4;
         transition: 0.5s;
         color: rgb(138, 14, 14);

@@ -48,7 +48,8 @@ code {
   text-decoration: none;
 }
 
-.header .container nav a.nav-link {
+.header .container nav a.nav-link,
+.header .container nav .logout {
   margin: 0 5px 0 5px;
   width: 120px;
   height: 40px;
@@ -66,12 +67,13 @@ code {
   color: #c4c4c4;
 }
 
-.header .container nav #basic-nav-dropdown {
+.header .container nav .logout {
   background-color: #8a0e0e;
   color: #c4c4c4;
+  font-weight: bold;
 }
 
-.header .container nav #basic-nav-dropdown:hover {
+.header .container nav .logout:hover {
   background: #c4c4c4;
   -webkit-transition: 0.5s;
   transition: 0.5s;

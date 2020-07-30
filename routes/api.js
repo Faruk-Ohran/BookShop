@@ -1,5 +1,11 @@
 const express = require("express");
 const router = express.Router();
+
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const keys = require("../config/keys");
+const passport = require("passport");
+
 const Books = require("../models/bookData");
 
 router.get("/getBooks", (req, res) => {
@@ -10,9 +16,6 @@ router.get("/getBooks", (req, res) => {
     .catch((error) => {});
 });
 
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const keys = require("../config/keys");
 // Load input validation
 const validateRegisterInput = require("../validation/register");
 const validateLoginInput = require("../validation/login");

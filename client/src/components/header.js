@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown, Form, FormControl } from "react-bootstrap";
+import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
 
 class Header extends Component {
   constructor(props) {
@@ -10,7 +14,12 @@ class Header extends Component {
       clicked: false,
     };
   }
+  onLogoutClick = (e) => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
   render() {
+    const { user } = this.props.auth;
     return (
       <div className="header">
         <div className="container">
@@ -51,12 +60,11 @@ class Header extends Component {
                 >
                   Books
                 </Link>
-                <NavDropdown title="More" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">
-                    Sign in
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">About</NavDropdown.Item>
-                </NavDropdown>
+
+                <button className="logout" onClick={this.onLogoutClick}>
+                  Logout
+                  {user.name === undefined ? "" : "," + user.name.split(" ")[0]}
+                </button>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
@@ -66,4 +74,13 @@ class Header extends Component {
   }
 }
 
-export default Header;
+Header.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { logoutUser })(Header);
