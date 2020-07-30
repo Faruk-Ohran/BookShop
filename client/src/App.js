@@ -60,16 +60,13 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Route
-              exact
-              path="/"
-              render={() => (
-                <Header
-                  search={this.state.search}
-                  updateSearch={this.updateSearch.bind(this)}
-                />
-              )}
+            <Header
+              data={{
+                search: this.state.search,
+                updateSearch: this.updateSearch.bind(this),
+              }}
             />
+
             <Route exact path="/login" component={Login} />
             <Route
               exact
